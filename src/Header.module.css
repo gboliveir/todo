@@ -13,3 +13,50 @@
   width: 126px;
   margin-bottom: 1rem;
 }
+
+.toDoForm {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(0px - 1.6875rem);
+  gap: 8px;
+}
+
+.toDoLabel {
+  display: none;
+  visibility: none;
+  height: 0;
+}
+
+.toDoInput {
+  background: var(--gray-500);
+  color: var(--gray-300);
+  width: 39.875rem;
+  height: 3.375rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.toDoBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 8px;
+  width: 90px;
+  height: 52px;
+  background: var(--blue-dark);
+  border: 0;
+  border-radius: 8px;
+
+  color: var(--gray-100);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.toDoBtn:hover {
+  opacity: 0.9;
+}
