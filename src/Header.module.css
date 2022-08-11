@@ -1,3 +1,7 @@
+main {
+  padding: 0 1rem;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -9,28 +13,33 @@
 }
 
 .header img {
-  height: 48px;
-  width: 126px;
+  height: 3rem;
+  width: 7.875rem;
   margin-bottom: 1rem;
 }
 
-.toDoForm {
+.form {
   display: flex;
   justify-content: center;
   margin-top: calc(0px - 1.6875rem);
   gap: 8px;
 }
 
-.toDoLabel {
+.inputGroup {
+  width: 100%;
+  max-width: 39.875rem;
+}
+
+.inputLabel {
   display: none;
   visibility: none;
   height: 0;
 }
 
-.toDoInput {
+.input {
+  width: 100%;
   background: var(--gray-500);
   color: var(--gray-300);
-  width: 39.875rem;
   height: 3.375rem;
   padding: 1rem;
   border: 1px solid var(--gray-700);
@@ -38,7 +47,7 @@
   line-height: 1.4;
 }
 
-.toDoBtn {
+.submitButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +66,85 @@
   cursor: pointer;
 }
 
-.toDoBtn:hover {
+.submitButton:hover {
   opacity: 0.9;
+}
+
+.toDoListContainer {
+  height: 17.93rem;
+  max-width: 46rem;
+  margin: 5rem auto 0 auto;
+}
+
+.toDoListHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.toDoListHeader span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0635;
+  color: #4EA8DE;
+}
+
+.toDoListHeader span:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0635;
+  color: #8284FA;
+}
+
+.toDoCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.5625rem;
+  height: 1.1875rem;
+  margin-left: 8px;
+  border-radius: 999px;
+  background: var(--gray-400);
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.06;
+  color: #D9D9D9;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15.25rem;
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.empty img {
+  margin-bottom: 1rem;
+}
+
+.emptyTopParagraph{
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--gray-300);
+}
+
+.emptyBottomParagraph {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--gray-300);
 }
