@@ -2,7 +2,7 @@ import logoImg from './assets/logo.svg';
 import plusIcon from './assets/plus-icon.svg';
 import clipboard from './assets/clipboard.svg';
 
-import styles from './Header.module.css';
+import styles from './App.module.css';
 
 export function App() {
   return (
