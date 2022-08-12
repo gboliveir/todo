@@ -1,6 +1,7 @@
 import logoImg from './assets/logo.svg';
 import plusIcon from './assets/plus-icon.svg';
 import clipboard from './assets/clipboard.svg';
+import trash from './assets/trash.svg';
 
 import styles from './App.module.css';
 
@@ -38,13 +39,25 @@ export function App() {
             </span>
           </header>
 
-          <div className={styles.empty}>
-            <img src={clipboard} alt="Imagem de caderneta" />
-            <p className={styles.emptyTopParagraph}>Você não tem tarefas cadastradas</p>
-            <p className={styles.emptyBottomParagraph}>Crie tarefas e organize seus itens a fazer</p>
+          <div className={styles.todo}>
+            <div className={styles.customCheckbox}>
+              <input id="todoStatus" name='todoStatus' type="checkbox" />
+              <label htmlFor="todoStatus" />
+            </div>
+            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <img src={trash} alt="Lixeira" />
           </div>
         </div>
       </main>
     </>
   )
 }
+
+
+/*
+  <div className={styles.empty}>
+    <img src={clipboard} alt="Imagem de caderneta" />
+    <p className={styles.emptyTopParagraph}>Você não tem tarefas cadastradas</p>
+    <p className={styles.emptyBottomParagraph}>Crie tarefas e organize seus itens a fazer</p>
+  </div>
+*/
