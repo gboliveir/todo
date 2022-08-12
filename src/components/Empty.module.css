@@ -1,0 +1,27 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15.25rem;
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.empty img {
+  margin-bottom: 1rem;
+}
+
+.emptyTopParagraph {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--gray-300);
+}
+
+.emptyBottomParagraph {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--gray-300);
+}
