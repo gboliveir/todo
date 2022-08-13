@@ -1,6 +1,6 @@
 .wrapper {
   padding: 0 1rem;
-  max-width: 46rem;
+  max-width: 47rem;
   margin: 5rem auto 0 auto;
 }
 
@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 1.5625rem;
+  padding: 0.5rem;
   height: 1.1875rem;
   margin-left: 8px;
   border-radius: 999px;

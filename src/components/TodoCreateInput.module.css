@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin: calc(0px - 1.6875rem) 1rem 0;
+  margin: calc(0px - 1.6875rem) 0 0;
+  padding: 0 1rem;
 }
 
 .inputGroup {
@@ -46,6 +47,11 @@
   cursor: pointer;
 }
 
-.submitButton:hover {
-  opacity: 0.9;
+.submitButton:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }

@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { TodoListContext } from '../contexts/TodoListContext';
+
 import trash from '../assets/trash.svg';
 
 import styles from './Todo.module.css';
@@ -5,32 +8,32 @@ import styles from './Todo.module.css';
 interface TodoProps {
   id: string;
   description: string;
-  onChangeActivationTodoItem: (id: string) => void;
   isActive: boolean;
 }
 
 export function Todo({
   id,
   description,
-  onChangeActivationTodoItem,
   isActive
 }: TodoProps) {
+  const { handleChangeActivationTodoItem, removeTodo } = useContext(TodoListContext);
+
   return (
-    <div key={id} className={styles.todo}>
+    <div className={!isActive ? styles.todoEnable : styles.todoDisabled}>
       <div className={styles.customCheckbox}>
         <input
-          id="todoStatus"
-          name='todoStatus'
+          id={`todoStatus-${id}`}
+          name={`todoStatus-${id}`}
           checked={isActive}
           type="checkbox" 
-          onChange={() => onChangeActivationTodoItem(id)}
+          onChange={() => handleChangeActivationTodoItem(id)}
         />
-        <label htmlFor="todoStatus" />
+        <label htmlFor={`todoStatus-${id}`} />
       </div>
 
-      <p>{description}</p>
+      <p className={!isActive ? styles.descriptionEnable : styles.descriptionDisabled}>{description}</p>
 
-      <button className={styles.deleteToDoButton}>
+      <button onClick={() => removeTodo(id)} className={styles.deleteToDoButton}>
         <img src={trash} alt="Lixeira" />
       </button>
     </div>
