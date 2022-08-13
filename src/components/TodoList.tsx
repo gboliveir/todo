@@ -34,6 +34,8 @@ export function TodoList() {
     
     setTodoList(newTodoList);
   }
+  
+  const listIsGreaterThanZero = todoList.length > 0;
 
   return (
     <div className={styles.wrapper}>
@@ -49,7 +51,7 @@ export function TodoList() {
       </header>
       
       <main>
-        {todoList.length > 0 ? (  
+        {listIsGreaterThanZero ? (  
           todoList.map(todo => {
             return (
               <Todo
